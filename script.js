@@ -13,6 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Arrays for characters
 var lowerCaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numericChar = ["1", "2","3", "4","5","6","7","8","9"];
@@ -22,9 +23,12 @@ var specialChar = ["!","?","$","\&", "\\", "%"];
 var numericCharWant = confirm("Do you want numeric characters?");
 var specialCharWant = confirm("Do you want special characters?"); */
 
-function generatePassowrd() {
-  for (let i = 0; i < lowerCaseChar.length; i++) {
-    var password = [Math.floor(Math.random() * lowerCaseChar.length)];
-    }};
+// for loop for lower case characters
+  for (var i = 0; i <= 10; i++) {
+
+  password = password + lowerCaseChar.charAt(Math.floor(Math.random() * Math.floor(lowerCaseChar.length -1)));
+
+}
+
 
 
