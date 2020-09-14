@@ -19,16 +19,47 @@ var upperCaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var numericChar = ["1", "2","3", "4","5","6","7","8","9"];
 var specialChar = ["!","?","$","\&", "\\", "%"];
 
-/* var upperCaseCharWant= confirm("Do you want upper case characters?");
-var numericCharWant = confirm("Do you want numeric characters?");
-var specialCharWant = confirm("Do you want special characters?"); */
+var confirmUpper= confirm("Do you want upper case characters?");
+var confirmNumeric = confirm("Do you want numeric characters?");
+var confirmSpecial = confirm("Do you want special characters?"); 
 
 // for loop for lower case characters
+function generatePassword () {
+  password=""
   for (var i = 0; i <= 10; i++) {
 
-  password = password + lowerCaseChar.charAt(Math.floor(Math.random() * Math.floor(lowerCaseChar.length -1)));
-
+    password = password + lowerCaseChar[ (Math.floor(Math.random() * Math.floor(lowerCaseChar.length - 1))) ];
+  }
+  return password
 }
+
+// If they want upper case characters
+if (confirmUpper) {
+  for (var u = 0; u <= 10; u++ ) {
+
+  }
+  password = password + upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
+  return password
+}
+
+// If they want numeric characters
+if (confirmNumeric) {
+  for (var n = 0; n <= 10; n++ ) {
+
+  }
+  password = password + numericChar[(Math.floor(Math.random() * Math.floor(numericChar.length - 1)))];
+  return password
+}
+
+// If they want special characters
+if (confirmSpecial) {
+  for (var s = 0; s <= 10; s++ ) {
+
+  }
+  password = password + upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
+  return password
+}
+
 
 
 
