@@ -45,8 +45,8 @@ function generatePassword () {
     // password = get first letter of password string and replace it with everything after + sign below. 
       password = password  
       var upperCaseMath = upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
-      var charsToReplace = password.substring(0, 3);
-      password = password.replace (charsToReplace, upperCaseMath);
+      var charsToReplace1 = password.substring(0, 3);
+      password = password.replace (charsToReplace1, upperCaseMath);
   }
   
   // If they want numeric characters, this adds 1  to the password. 
@@ -55,8 +55,8 @@ function generatePassword () {
 
       password = password 
       var numericCharMath = numericChar[(Math.floor(Math.random() * Math.floor(numericChar.length - 1)))];
-      var charsToReplace = password.substring(0, 4);
-      password = password.replace (charsToReplace, numericCharMath);
+      var charsToReplace2 = password.substring(1, 3);
+      password = password.replace (charsToReplace2, numericCharMath);
     
     
   }
@@ -68,8 +68,8 @@ function generatePassword () {
       password = password 
       
       var specialCharMath = specialChar[(Math.floor(Math.random() * Math.floor(specialChar.length - 1)))];
-      var charsToReplace = password.substring(0, 5);
-      password = password.replace (charsToReplace, specialCharMath);
+      var charsToReplace3 = password.substring(2, 3);
+      password = password.replace (charsToReplace3, specialCharMath);
 
   // same way to other characters. If it works, make function that will do it. put it outside original
   }
