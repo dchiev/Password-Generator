@@ -41,17 +41,17 @@ function generatePassword () {
       password = password + lowerCaseChar[ (Math.floor(Math.random() * Math.floor(lowerCaseChar.length - 1))) ];
     }
   }
+  //If they want an upper case character, this will add it to the beginning. 
   if (confirmUpper) {
-    // password = get first letter of password string and replace it with everything after + sign below. 
+
       password = password  
       var upperCaseMath = upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
       var charsToReplace1 = password.substring(0, 3);
       password = password.replace (charsToReplace1, upperCaseMath);
   }
   
-  // If they want numeric characters, this adds 1  to the password. 
+  // If they want numeric characters, this adds it to the beginning. 
   if (confirmNumeric) {
-    // replace the second letter
 
       password = password 
       var numericCharMath = numericChar[(Math.floor(Math.random() * Math.floor(numericChar.length - 1)))];
@@ -61,17 +61,14 @@ function generatePassword () {
     
   }
   
-  // If they want special characters, this adds 1 to the password. 
+  // If they want special characters, this adds it to the beginning.  
   if (confirmSpecial) {
-    // replace the third letter 
- 
+
       password = password 
-      
       var specialCharMath = specialChar[(Math.floor(Math.random() * Math.floor(specialChar.length - 1)))];
       var charsToReplace3 = password.substring(2, 3);
       password = password.replace (charsToReplace3, specialCharMath);
 
-  // same way to other characters. If it works, make function that will do it. put it outside original
   }
   return password
 }
