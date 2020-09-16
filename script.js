@@ -31,8 +31,8 @@ var confirmSpecial = confirm("Do you want special characters?");
 
 // for loop for lower case characters
 function generatePassword () {
-  if (confirmLength < 8 || confirmLength >=128 ){
-    return "Too many characters!"
+  if (confirmLength < 8 || confirmLength >= 50 ){
+    return "Not enough characters!"
   }
   password=""
   if (confirmLower) {
@@ -43,29 +43,35 @@ function generatePassword () {
   }
   if (confirmUpper) {
     // password = get first letter of password string and replace it with everything after + sign below. 
-      password = password + upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
-
-    
+      password = password  
+      var upperCaseMath = upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
+      var charsToReplace = password.substring(0, 3);
+      password = password.replace (charsToReplace, upperCaseMath);
   }
   
-  // If they want numeric characters, this adds 2 to the password. 
+  // If they want numeric characters, this adds 1  to the password. 
   if (confirmNumeric) {
     // replace the second letter
 
-      password = password + numericChar[(Math.floor(Math.random() * Math.floor(numericChar.length - 1)))];
-    
+      password = password 
+      var numericCharMath = numericChar[(Math.floor(Math.random() * Math.floor(numericChar.length - 1)))];
+      var charsToReplace = password.substring(0, 4);
+      password = password.replace (charsToReplace, numericCharMath);
     
     
   }
   
-  // If they want special characters, this adds 2 to the password. 
+  // If they want special characters, this adds 1 to the password. 
   if (confirmSpecial) {
     // replace the third letter 
  
-      password = password + specialChar[(Math.floor(Math.random() * Math.floor(specialChar.length - 1)))];
-    
-    
-    
+      password = password 
+      
+      var specialCharMath = specialChar[(Math.floor(Math.random() * Math.floor(specialChar.length - 1)))];
+      var charsToReplace = password.substring(0, 5);
+      password = password.replace (charsToReplace, specialCharMath);
+
+  // same way to other characters. If it works, make function that will do it. put it outside original
   }
   return password
 }
