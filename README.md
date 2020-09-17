@@ -1,7 +1,7 @@
 # Password-Generator
 <img src = "./Assets/readme_assets/password_generator.png">
 
-    This Password Generator is designed to give you a password depending on your needs. Choose from the amount of characters and if you desire upper case, numeric, and special characters. 
+This Password Generator is designed to give you a password depending on your needs. Choose from the amount of characters and if you desire upper case, numeric, and special characters. 
 
 
 # Logic and Process
