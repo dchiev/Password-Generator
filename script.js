@@ -32,7 +32,7 @@ var confirmSpecial = confirm("Do you want special characters?");
 
 // for loop for lower case characters
 function generatePassword () {
-  if (confirmLength < 8 || confirmLength >= 50 ){
+  if (confirmLength < 8 || confirmLength >= 128 ){
     return "Not enough characters!"
   }
   password=""
