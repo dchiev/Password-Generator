@@ -1,7 +1,7 @@
 # Password-Generator
 <img src = "./Assets/readme_assets/password_generator.png">
 
-    This Password Generator is designed to give you a password depending on your needs. Choose from the amount of charcter and if you desire upper case, numeric, and special characters. 
+    This Password Generator is designed to give you a password depending on your needs. Choose from the amount of characters and if you desire upper case, numeric, and special characters. 
 
 
 # Logic and Process
@@ -25,6 +25,7 @@ var confirmNumeric = confirm("Do you want numeric characters?");
 var confirmSpecial = confirm("Do you want special characters?"); 
 ```
 
+
 3. Inside the original function, I have my first if statement to confirm password length. If the request is less than 8 characters or more than 50, it will return "Not enough characters. This stops the entire process:
 
 ```
@@ -34,7 +35,9 @@ function generatePassword () {
   }
 ```
 
+
 4. If lower case characters are desired, it runs through a for loop, with Math.floor and Math.random to choose those amount of random characters:
+
 ```
 password=""
   if (confirmLower) {
@@ -43,6 +46,23 @@ password=""
       password = password + lowerCaseChar[ (Math.floor(Math.random() * Math.floor(lowerCaseChar.length - 1))) ];
     }
 ```
+
+5. If they accept the Upper case condition, this block of code will add one uppercase character. I also used substring and replace to add the character to the front. 
+
+```
+  if (confirmUpper) {
+
+      password = password  
+      var upperCaseMath = upperCaseChar[(Math.floor(Math.random() * Math.floor(upperCaseChar.length - 1)))];
+      var charsToReplace1 = password.substring(0, 3);
+      password = password.replace (charsToReplace1, upperCaseMath);
+  }
+```
+
+6.  The same idea goes for the next two conditions - the numeric and special characters. This has similar code. 
+
+7. Then finally, it returns the new string at the end. 
+
 
 
 
